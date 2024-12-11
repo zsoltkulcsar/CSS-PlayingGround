@@ -25,6 +25,16 @@ prev.addEventListener("click", () => {
   update();
 });
 
+prev.addEventListener("click", () => {
+  currentActive--;
+
+  if (currentActive < circles.length) {
+    currentActive = 1;
+  }
+
+  update();
+});
+
 function update() {
   circles.forEach((circle, idx) => {
     if (idx < currentActive) {
